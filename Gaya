@@ -1,0 +1,268 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Champaran Meat House</title>
+<style>
+  /* Reset & Basics */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff3e0;
+    margin: 0;
+    padding: 0;
+    color: #5d3a00;
+  }
+  h1, h2, h3 {
+    color: #c56c09;
+  }
+  a {
+    color: #c56c09;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  header {
+    background: #ffa726;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .container {
+    padding: 15px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  /* Contact & WhatsApp Button */
+  .contact-info {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .whatsapp-btn {
+    background: #25d366;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .whatsapp-btn:hover {
+    background: #1ebe57;
+  }
+
+  /* Menu Section */
+  section.menu-section {
+    margin-bottom: 30px;
+  }
+  ul.menu-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul.menu-list li {
+    border-bottom: 1px dotted #c56c09;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Thali Section Design */
+  .thali-box {
+    border: 2px solid #c56c09;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #ffecb3;
+  }
+  .thali-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #a05200;
+  }
+  .thali-box p {
+    margin: 4px 0;
+  }
+
+  /* Login and Admin Links */
+  .top-links {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  .top-links a {
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    ul.menu-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    ul.menu-list li span.price {
+      margin-top: 5px;
+      font-weight: 700;
+    }
+    .whatsapp-btn {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  Champaran Meat House - Near Rampur Thana, Gaya
+</header>
+
+<div class="container">
+  <div class="top-links">
+    <a href="#" onclick="alert('Login system coming soon!')">Login</a>
+    <a href="#" onclick="alert('Admin panel coming soon!')">Admin Panel</a>
+  </div>
+
+  <p class="contact-info">Contact: <a href="tel:8292581999">8292581999</a></p>
+
+  <button class="whatsapp-btn" onclick="sendWhatsAppOrder()">Order via WhatsApp</button>
+
+  <section class="menu-section" id="biryani">
+    <h2>Biryani</h2>
+    <ul class="menu-list">
+      <li><span>Chicken Dum Biryani (S)</span><span class="price">₹190</span></li>
+      <li><span>Chicken Dum Biryani (D)</span><span class="price">₹360</span></li>
+      <li><span>Mutton Dum Biryani (S)</span><span class="price">₹260</span></li>
+      <li><span>Mutton Dum Biryani (D)</span><span class="price">₹500</span></li>
+      <li><span>Egg Biryani</span><span class="price">₹170</span></li>
+      <li><span>Biryani Rice</span><span class="price">₹130</span></li>
+      <li><span>Extra Chicken</span><span class="price">₹90</span></li>
+    </ul>
+  </section>
+
+  <section class="menu-section" id="tandoori">
+    <h2>Tandoori</h2>
+    <ul class="menu-list">
+      <li><span>Tandoori Roti</span><span class="price">₹15</span></li>
+      <li><span>Butter Tandoori Roti</span><span class="price">₹20</span></li>
+      <li><span>Plain Nan</span><span class="price">₹50</span></li>
+      <li><span>Butter Nan</span><span class="price">₹60</span></li>
+      <li><span>Stuffed Kulcha</span><span class="price">₹65</span></li>
+      <li><span>Garlic Nan</span><span class="price">₹60</span></li>
+      <li><span>Onion Mix Nan</span><span class="price">₹65</span></li>
+      <li><span>Stuffed Nan</span><span class="price">₹65</span></li>
+    </ul>
+  </section>
+
+  <section class="menu-section" id="sides">
+    <h2>Sides</h2>
+    <ul class="menu-list">
+      <li><span>Green Salad</span><span class="price">₹60</span></li>
+      <li><span>Papad</span><span class="price">₹20</span></li>
+      <li><span>Rasqula</span><span class="price">₹15</span></li>
+      <li><span>Raita</span><span class="price">₹60</span></li>
+      <li><span>Masala Cold Drink</span><span class="price">₹30</span></li>
+      <li><span>Cold Drink</span><span class="price">MRP</span></li>
+      <li><span>Mineral Water</span><span class="price">₹30</span></li>
+      <li><span>Onion Salad</span><span class="price">₹30</span></li>
+    </ul>
+  </section>
+
+  <section class="menu-section" id="kebab">
+    <h2>Kebab (Non Veg Delight)</h2>
+    <ul class="menu-list">
+      <li><span>Chicken Maharani (8 Pc)</span><span class="price">₹240</span></li>
+      <li><span>Chicken Yellow Kebab (8 Pc)</span><span class="price">₹220</span></li>
+      <li><span>Chicken Platter Kebab (12 Pc)</span><span class="price">₹340</span></li>
+      <li><span>Paneer Malai Tikka (6 Pc)</span><span class="price">₹220</span></li>
+      <li><span>Paneer Kali Mirch (8 Pc)</span><span class="price">₹190</span></li>
+      <li><span>Paneer Tikka (6 Pc)</span><span class="price">₹220</span></li>
+      <li><span>Paneer Hari Tikka</span><span class="price">₹240</span></li>
+      <li><span>Chicken Tikka (8 Pc)</span><span class="price">₹400</span></li>
+      <li><span>Chicken Tandoori (Half)</span><span class="price">₹210</span></li>
+      <li><span>Chicken Leg Kebab (2 Pc)</span><span class="price">₹190</span></li>
+      <li><span>Chicken Reshmi Kebab (8 Pc)</span><span class="price">₹220</span></li>
+      <li><span>Chicken Garlic Kebab (8 Pc)</span><span class="price">₹230</span></li>
+      <li><span>Chicken Garden Kebab (8 Pc)</span><span class="price">₹220</span></li>
+      <li><span>Chicken Hari Mirch Kebab (8 Pc)</span><span class="price">₹220</span></li>
+      <li><span>Chicken Kali Mirch Kebab (8 Pc)</span><span class="price">₹220</span></li>
+      <li><span>Malai Tikka (8 Pc)</span><span class="price">₹240</span></li>
+      <li><span>Kasturi Kebab (8 Pc)</span><span class="price">₹220</span></li>
+      <li><span>Chicken Chicken Afghani (8 Pc)</span><span class="price">₹220</span></li>
+    </ul>
+  </section>
+
+  <section class="menu-section" id="thali">
+    <h2>Thali Offers</h2>
+
+    <div class="thali-box">
+      <h3>275 रु. थाली (Mutton Thali)</h3>
+      <p>मटन हाड़ी 1 प्लेट (300 gm)</p>
+      <p>चावल 1 प्लेट</p>
+      <p>रोटी 2 पीस</p>
+      <p>मिनरल पानी 500 ML</p>
+    </div>
+
+    <div class="thali-box">
+      <h3>160 रु. थाली (Chicken Thali)</h3>
+      <p>चिकन हाड़ी 1 प्लेट</p>
+      <p>चावल 1 प्लेट</p>
+      <p>रोटी 2 पीस</p>
+      <p>मिनरल पानी 500 ML</p>
+    </div>
+
+    <div class="thali-box">
+      <h3>110 रु. थाली (Anda Curry Thali)</h3>
+      <p>अंडा करी 2 पीस</p>
+      <p>चावल 1 प्लेट</p>
+      <p>रोटी 2 पीस</p>
+      <p>मिनरल पानी 500 ML</p>
+    </div>
+
+    <div class="thali-box">
+      <h3>100 रु. थाली (Maggie Thali)</h3>
+      <p>मग्गी 2 पीस</p>
+      <p>चावल 1 प्लेट</p>
+      <p>रोटी 2 पीस</p>
+      <p>मिनरल पानी 500 ML</p>
+    </div>
+  </section>
+
+  <footer style="text-align: center; margin-top: 30px; padding: 10px; color: #c56c09; font-weight: bold;">
+    BHAGALPUR | DHANBAD | PURNIA | GAYA
+  </footer>
+</div>
+
+<script>
+  // Function to open WhatsApp chat with order message (placeholder)
+  function sendWhatsAppOrder() {
+    const number = '8292581999';
+    let orderText = 'Hello Champaran Meat House, I would like to place an order. Please provide details.';
+    let url = `https://wa.me/${number}?text=${encodeURIComponent(orderText)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
+pincode 823001
+jail press 
+Road near rampur thana 
+gaya 
